@@ -26,13 +26,13 @@ public class PriorityQueue {
     void enQueue(int element) {
         int temp = 0;
         if(isFull())
-            System.out.println("Î÷åðåäü çàïîëíåíà!");
+            System.out.println("ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð°!");
         else {
             if (front == -1)
                 front = 0;
             rear++;
             items[rear] = element;
-            System.out.println("Äîáàâëåí ýëåìåíò " + element);
+            System.out.println("Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ " + element);
         }
     }
 
@@ -42,7 +42,7 @@ public class PriorityQueue {
     int deQueue() {
         int temp = 0;
         if (isEmpty())
-            System.out.println("Î÷åðåäü ïóñòàÿ");
+            System.out.println("ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°Ñ");
         else {
             temp = items[front];
             if (front >= rear) {
@@ -50,7 +50,7 @@ public class PriorityQueue {
                 rear = -1;
             } else
                 front++;
-            System.out.println("Óäàëåí ýëåìåíò -> " + temp);
+            System.out.println("Ð£Ð´Ð°Ð»ÐµÐ½ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ -> " + temp);
 
         }
         return temp;
@@ -59,15 +59,15 @@ public class PriorityQueue {
     void display() {
         int i;
         if(isEmpty())
-            System.out.println("Ïóñòàÿ î÷åðåäü");
+            System.out.println("ÐŸÑƒÑÑ‚Ð°Ñ Ð¾Ñ‡ÐµÑ€ÐµÐ´ÑŒ");
         else {
-            System.out.println("\nÈíäåêñ FRONT -> " + front);
-            System.out.println("Ýëåìåíòû -> ");
+            System.out.println("\nÐ˜Ð½Ð´ÐµÐºÑ FRONT -> " + front);
+            System.out.println("Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ -> ");
             for(i = front; i <= rear; i++) {
                 sort();
                 System.out.print(items[i] + " ");
             }
-            System.out.println("\nÈíäåêñ REAR -> " + rear);
+            System.out.println("\nÐ˜Ð½Ð´ÐµÐºÑ REAR -> " + rear);
         }
     }
 
