@@ -19,16 +19,16 @@ public class Stack {
 
     public void push(int x) {
         if (isFull())
-            System.out.println("Стек заполнен!");
+            System.out.println("РЎС‚РµРє Р·Р°РїРѕР»РЅРµРЅ!");
         else {
-            System.out.println("Добавлен элемент!");
+            System.out.println("Р”РѕР±Р°РІР»РµРЅ СЌР»РµРјРµРЅС‚!");
             arr[++top] = x;
         }
     }
 
     public int pop() {
         if (isEmpty())
-            System.out.println("Пустой стек!");
+            System.out.println("РџСѓСЃС‚РѕР№ СЃС‚РµРє!");
         return arr[top--];
     }
 
